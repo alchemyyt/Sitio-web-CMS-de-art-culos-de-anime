@@ -1,0 +1,9 @@
+/////////////////Cors config
+const corsOptions = {
+  origin: "http://localhost:3000", // Reemplaza con tu URL de frontend
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
+
+app.use(cors(corsOptions));
+/////////////////////
