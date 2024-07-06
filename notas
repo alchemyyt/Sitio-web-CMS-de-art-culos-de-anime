@@ -7,3 +7,13 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 /////////////////////
+tareas
+*hacer el componete en home desktop de noticias
+*hacer el componete en home mobile de casplay
+*hacer el componete en home desktop de coplay
+*estilos de menu mobile
+*hacer footer
+*hacer la pagina de noticias
+*hacer la pagina de cosplay
+*hacer iteracion de paginas de noticias individuales
+*hacer iteracion de paginas de cosplay individuales

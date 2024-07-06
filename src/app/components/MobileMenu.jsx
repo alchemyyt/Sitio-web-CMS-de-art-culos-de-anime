@@ -12,7 +12,7 @@ const MobileMenu = () => {
   return (
     <>
       {isOpen && (
-        <div className="fixed top-0 left-0 bg-white flex flex-col items-center text-center">
+        <div className="fixed top-0 left-0 z-10 bg-white flex flex-col items-center text-center">
           <ul className="p-10">
             <li>
               <h2>Este es el menú</h2>
