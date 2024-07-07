@@ -6,3 +6,8 @@ export async function getData(endpoint) {
   const dataArray = dataJson.docs;
   return dataArray;
 }
+export async function getSpecificData(collection,id) {
+  const res = await fetch(`${url}/${collection}/${id}`);
+  const dataJson = await res.json();
+  return dataJson;
+}

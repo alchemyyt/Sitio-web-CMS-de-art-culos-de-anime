@@ -7,8 +7,8 @@ const AnimeNews = ({ data }) => {
   const lastPosts = lastElements(4, data);
   return (
     <div>
-      <Link href={"#"}>
-        <h2 className="hover:text-amber-500 text-xl ">Noticiass</h2>
+      <Link href={"./noticias"}>
+        <h2 className="hover:text-amber-500 text-xl ">Noticias</h2>
       </Link>
       <ul className="flex overflow-x-scroll">
         {lastPosts.map((element) => (
