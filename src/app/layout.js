@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import MobileHeader from "./components/MobileHeader";
+import DesktopHeader from "./components/DesktopHeader";
 import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,11 +16,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`w-full bg-red-500 ${inter.className}`}>
         <MobileHeader />
-
+        <DesktopHeader />
         {children}
-        <Footer/>
-
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

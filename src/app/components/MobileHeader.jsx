@@ -1,28 +1,28 @@
 "use client";
 import { React, useState } from "react";
-import { useRouter } from 'next/navigation'
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FiMenu } from "react-icons/fi";
 import { IoIosArrowBack } from "react-icons/io";
 import MobileMenu from "./MobileMenu";
 
-
 const MobileHeader = () => {
   const [clickedMenu, setClickedMenu] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
   const handleClickMenu = () => {
     setClickedMenu(!clickedMenu);
   };
   return (
     <div className="">
-      <nav className="">
-        {clickedMenu ? <MobileMenu /> : null}
-      </nav>
-      <header className="  flex md:hidden lg:hidden  aling-center justify-between border-2 shadow-xl shadow-amber-200 border-amber-600 p-4 bg-amber-400 ">
+      <nav className="">{clickedMenu ? <MobileMenu /> : null}</nav>
+      <header className="  flex lg:hidden  aling-center justify-between border-2 shadow-xl shadow-amber-200 border-amber-600 p-4 bg-amber-400 ">
         <IoIosArrowBack
           className="size-6 text-black cursor-pointer"
           onClick={() => router.back()}
         />
-        <h1 className='text-xl font-bold'>Anime En español</h1>
+        <Link href="./">
+          <h1 className="text-xl font-bold">Anime En español</h1>
+        </Link>
         <div>
           <FiMenu
             className="size-6 text-black cursor-pointer"

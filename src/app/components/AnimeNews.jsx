@@ -1,20 +1,19 @@
 "use client";
 import React from "react";
 import { lastElements } from "../services/lastElements";
-import Image from "next/image";
 import Link from "next/link";
 const AnimeNews = ({ data }) => {
-  const lastPosts = lastElements(4, data);
+  const lastPosts = lastElements(10, data);
   return (
     <div>
       <Link href={"./noticias"}>
-        <h2 className="hover:text-amber-500 text-xl ">Noticias</h2>
+        <h2 className="hover:text-amber-500 text-xl ">Ultimas Noticias</h2>
       </Link>
-      <ul className="flex overflow-x-scroll">
+      <ul className="flex overflow-x-scroll whitespace-nowrap cursor-grab">
         {lastPosts.map((element) => (
           <Link key={element.id} href={"#"}>
             <li
-              className=" flex  min-w-60 m-2 border-2 border-amber-400 relative"
+              className=" flex  min-w-56 max-w-56 min-h-80 max-h-80 m-2 border-2 border-amber-400 relative"
               key={element.id}
             >
               <img

@@ -1,0 +1,18 @@
+/////////////////Cors config
+const corsOptions = {
+  origin: "http://localhost:3000", // Reemplaza con tu URL de frontend
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
+
+app.use(cors(corsOptions));
+/////////////////////
+tareas
+*creacion de paginas de noticias
+*creacion de paginasde cosplay
+*poner los url de cada pagina en home de cosplay y noticias
+*hacer iteracion de paginas de noticias en la pagina pricipal de noticias
+*hacer iteracion de paginas de cosplay en la pagina pricipal de cosplay
+*decidir que hacer con la pagina vtuber, categorias
+*hacer coleccion de comunidad y terminar pagina iteraciones y iteraciones en home
+*hecer una coleccion en payload que se llame otros y que reciba html y hacer componente que convierta el html revisar en git hub cono lo hice en chuletas y con la categoria las clasifico con un filter revisar en girhub tambien web y ingles content

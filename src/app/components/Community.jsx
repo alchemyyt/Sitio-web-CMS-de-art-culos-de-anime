@@ -2,17 +2,17 @@ import React from "react";
 import Link from "next/link";
 import { lastElements } from "../services/lastElements";
 const Comunity = ({ data }) => {
-  const lastPosts = lastElements(4, data);
+  const lastPosts = lastElements(10, data);
   return (
     <div>
-       <Link href={"#"}>
+      <Link href={"./comunidad"}>
         <h2 className="hover:text-amber-500 text-xl ">Comunidad</h2>
       </Link>
       <ul className="flex overflow-x-scroll">
         {lastPosts.map((element) => (
           <Link key={element.id} href={"#"}>
             <li
-              className=" flex  min-w-60 m-2 border-2 border-amber-400 relative"
+              className=" flex min-w-56 max-w-56 min-h-80 max-h-80 overflow-hidden m-2 border-2 border-amber-400 relative"
               key={element.id}
             >
               <img
