@@ -11,7 +11,7 @@ const AnimeNews = ({ data }) => {
       </Link>
       <ul className="flex overflow-x-scroll whitespace-nowrap cursor-grab">
         {lastPosts.map((element) => (
-          <Link key={element.id} href={"#"}>
+          <Link key={element.id} href={`./noticias/${element.id}`}>
             <li
               className=" flex  min-w-56 max-w-56 min-h-80 max-h-80 m-2 border-2 border-amber-400 relative"
               key={element.id}
