@@ -20,7 +20,7 @@ const MobileHeader = () => {
           className="size-6 text-black cursor-pointer"
           onClick={() => router.back()}
         />
-        <Link href="./">
+        <Link href="/">
           <h1 className="text-xl font-bold">Anime En español</h1>
         </Link>
         <div>

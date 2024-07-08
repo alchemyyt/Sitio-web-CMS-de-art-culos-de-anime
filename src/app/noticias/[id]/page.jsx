@@ -10,7 +10,7 @@ export default async function Page({ params }) {
       <p>{noticia.Descripcion}</p>
       <iframe
         className=" mx-auto inline-block w-11/12 h-60 max-w-96 rounded-sm"
-        src={noticia.videoPrincipal}
+        src=""
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
