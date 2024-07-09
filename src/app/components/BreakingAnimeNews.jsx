@@ -2,14 +2,14 @@
 import React from "react";
 import { lastElements } from "../services/lastElements";
 import Link from "next/link";
-const AnimeNews = ({ data }) => {
+const BreakingAnimeNews = ({ data }) => {
   const lastPosts = lastElements(10, data);
   return (
     <div>
       <Link href={"./noticias"}>
         <h2 className="hover:text-amber-500 text-xl ">Ultimas Noticias</h2>
       </Link>
-      <ul className="flex overflow-x-scroll whitespace-nowrap cursor-grab">
+      <ul className="flex overflow-x-scroll ">
         {lastPosts.map((element) => (
           <Link key={element.id} href={`./noticias/${element.id}`}>
             <li
@@ -22,7 +22,7 @@ const AnimeNews = ({ data }) => {
                 className="w-full transition-all duration-300 hover:brightness-50"
                 cl
               />
-              <p className="max-h-1/3 max-w-full absolute bottom-0 overflow-hidden text-xl font-bold text-center text-amber-500 m-1  hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105">
+              <p className="max-h-36 max-w-full absolute bottom-0 overflow-hidden text-xl font-bold text-center text-amber-500 m-1  hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105">
                 {element.titulo}
               </p>
             </li>
@@ -33,4 +33,4 @@ const AnimeNews = ({ data }) => {
   );
 };
 
-export default AnimeNews;
+export default BreakingAnimeNews;
