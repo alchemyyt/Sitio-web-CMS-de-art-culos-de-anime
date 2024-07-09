@@ -1,4 +1,4 @@
-const url = process.env.NEXT_PUBLIC_API_URL;
+const url = process.env.API_URL;
 
 export async function getData(endpoint) {
   const res = await fetch(`${url}/${endpoint}`);

@@ -24,11 +24,6 @@ const MenuList = () => {
           <h3>Vtubers</h3>
         </li>
       </Link>
-      <Link href="/categorias" className=" flex flex-col justify-center">
-        <li className=" text-xl font-bold hover:text-amber-950 duration-300 m-3">
-          <h3>Categorias</h3>
-        </li>
-      </Link>
     </ul>
   );
 };

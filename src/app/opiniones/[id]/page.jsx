@@ -9,43 +9,42 @@ export default async function Page({ params }) {
 
   return (
     <main className="flex flex-col aling-center text-center min-h-screen lg:w-3/4 lg:mx-auto bg-white lg:px-6 overflow-hidden">
-      <h1 className="font-bold text-xl m-2">{tops.titulo||reseñas.titulo}</h1>
-      <p className='m-2'>{reseñas.argumento ||tops.introduccion}</p>
+      <h1 className="font-bold text-xl m-2">{tops.titulo || reseñas.titulo}</h1>
+      <p className="m-2">{reseñas.argumento || tops.introduccion}</p>
       {tops.video && (
         //Cambiar esta logica cuando cambie las collecciones de payload
         <YoutubeVideo data={tops.video} />
       )}
       <div>
-      <img
-        src={tops.portada || reseñas.imagen}
-        alt="web"
-        className="min-w-56 max-w-56 min-h-80 max-h-80 mx-auto sm:ml-2 mb-6 sm:mb-2 sm:float-right border-2 rounded-md border-amber-400 transition-all duration-300   "
-        cl
-      />
-      <p className='mb-2 mx-2'>{reseñas.resena ||tops.noticia}</p>
-      {tops.anime && (
-        //Cambiar esta logica cuando cambie las collecciones de payload
-        tops.anime.map((e)=>
-          <div key={e.id}>
-            <h2 >{e.posicion}</h2>
-            <img
-            src={e.imagen}
-            alt="web"
-            className=" mx-auto border-2 rounded-md border-amber-400 transition-all       duration-300   "
-            cl
-            />
-            <p>{e.argumento}</p>
-          </div>
-        )
-      )}
+        <img
+          src={tops.portada || reseñas.imagen}
+          alt="web"
+          className="min-w-56 max-w-56 min-h-80 max-h-80 mx-auto sm:ml-2 mb-6 sm:mb-2 sm:float-right border-2 rounded-md border-amber-400 transition-all duration-300   "
+          cl
+        />
+        <p className="mb-2 mx-2">{reseñas.resena || tops.noticia}</p>
       </div>
-      {reseñas.conclusion&&(
+      {tops.anime &&
+        //Cambiar esta logica cuando cambie las collecciones de payload
+        tops.anime.map((e) => (
+          <div key={e.id}>
+            <h2 className="text-3xl font-bold m-2">{`Puesto: ${e.posicion}`}</h2>
+            <img
+              src={e.imagen}
+              alt="web"
+              className=" w-11/12 mx-auto border-2 rounded-md border-amber-400 transition-all duration-300   "
+              cl
+            />
+            <p className="m-2 ">{e.argumento}</p>
+          </div>
+        ))}
+      {reseñas.conclusion && (
         <div>
-          <h2 className='font-bold text-xl mb-2'>Conclusion</h2>
-          <p >{reseñas.conclusion}</p>
+          <h2 className="font-bold text-xl mb-2">Conclusion</h2>
+          <p>{reseñas.conclusion}</p>
         </div>
       )}
-    <p className='m-2 text-right'>{reseñas.fecha  || tops.fecha}</p>
+      <p className="m-2 text-right">{reseñas.fecha || tops.fecha}</p>
     </main>
   );
 }

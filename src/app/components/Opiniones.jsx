@@ -21,7 +21,7 @@ const Opiniones = async () => {
   return (
     <div>
       <Link href={"/opiniones"}>
-        <h2 className="hover:text-amber-500 text-xl ">Reseñas</h2>
+        <h2 className="hover:text-amber-500 text-xl ">Opiniones</h2>
       </Link>
       <ul className="flex overflow-x-scroll">
         {allOpiniones.map((element) => (

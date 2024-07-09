@@ -22,11 +22,11 @@ export default async function Page({ params }) {
         <p className="mx-6">{cosplay.cosplay}</p>
       </div>
       <p className="text-right m-2">{cosplay.fecha}</p>
-      <Link href="#">
+      {/*<Link href="#">
         <p className="text-right hover:text-amber-500 mr-2 mb-2">
           {cosplay.SeleccionarCategoria}
         </p>
-      </Link>
+      </Link>*/}
     </main>
   );
 }

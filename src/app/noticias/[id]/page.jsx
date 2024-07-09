@@ -23,11 +23,11 @@ export default async function Page({ params }) {
         <p className="mx-6">{noticia.noticia}</p>
       </div>
       <p className="text-right m-2">{noticia.fecha}</p>
-      <Link href="#">
+      {/*<Link href="#">
         <p className="text-right hover:text-amber-500 mr-2 mb-2">
           {noticia.SeleccionarCategoria}
         </p>
-      </Link>
+      </Link> */}
     </main>
   );
 }
