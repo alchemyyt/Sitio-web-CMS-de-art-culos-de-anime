@@ -1,19 +1,18 @@
-import Image from "next/image";
-import AnimeNews from "./components/AnimeNews";
+import BreakingAnimeNews from "./components/BreakingAnimeNews";
 import Cosplay from "./components/Cosplay";
-import Comunity from "./components/Community";
+import Opiniones from "./components/Opiniones";
 import Facebook from "./components/Facebook";
 import { getData } from "./services/getData";
 export default async function Home() {
-  const noticias = await getData("noticias-anime/");
+  const noticias = await getData("noticias/");
   const cosplay = await getData("cosplay-y-arte/");
 
   return (
     <main className="flex flex-col justify-between aling-center text-center min-h-screen min-w-full bg-white lg:grid lg:grid-cols-3  ">
       <div className="col-span-2 ">
-        <AnimeNews data={noticias} />
+        <BreakingAnimeNews data={noticias} />
         <Cosplay data={cosplay} />
-        <Comunity data={noticias} />
+        <Opiniones />
         <div className="lg:hidden">
           <Facebook />
         </div>

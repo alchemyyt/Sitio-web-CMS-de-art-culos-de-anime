@@ -1,22 +1,20 @@
 import React from "react";
 import Link from "next/link";
-import { lastElements } from "../services/lastElements";
-const Comunity = ({ data }) => {
-  const lastPosts = lastElements(10, data);
+import { getData } from "../services/getData";
+const Page = async () => {
+  const news = await getData("cosplay-y-arte/");
   return (
-    <div>
-      <Link href={"./comunidad"}>
-        <h2 className="hover:text-amber-500 text-xl ">Comunidad</h2>
-      </Link>
-      <ul className="flex overflow-x-scroll">
-        {lastPosts.map((element) => (
-          <Link key={element.id} href={"#"}>
+    <main>
+      <h1 className="text-3xl font-bold text-center m-1">Cosplay y Arte</h1>
+      <ul className="flex flex-wrap justify-center">
+        {news.map((element) => (
+          <Link key={element.id} href={`./cosplay-y-arte/${element.id}`}>
             <li
-              className=" flex min-w-56 max-w-56 min-h-80 max-h-80 overflow-hidden m-2 border-2 border-amber-400 relative"
+              className=" flex  min-w-56 max-w-56 min-h-80 max-h-80 m-2 border-2 border-amber-400 relative"
               key={element.id}
             >
               <img
-                src={element.imagenNoticiaUrl}
+                src={element.imagenes[0].url}
                 alt="web"
                 className="w-full transition-all duration-300 hover:brightness-50"
                 cl
@@ -28,8 +26,8 @@ const Comunity = ({ data }) => {
           </Link>
         ))}
       </ul>
-    </div>
+    </main>
   );
 };
 
-export default Comunity;
+export default Page;

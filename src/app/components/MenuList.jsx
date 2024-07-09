@@ -3,28 +3,28 @@ import Link from "next/link";
 const MenuList = () => {
   return (
     <ul className="my-8 lg:flex lg:my-0">
-      <Link href="./noticias" className="flex flex-col justify-center">
+      <Link href="/noticias" className="flex flex-col justify-center">
         <li className=" text-xl font-bold hover:text-amber-950 duration-300 m-3 ">
           <h3>Noticias</h3>
         </li>
       </Link>
 
-      <Link href="./cosplay-y-arte" className="  flex flex-col justify-center">
+      <Link href="/cosplay-y-arte" className="  flex flex-col justify-center">
         <li className=" text-xl font-bold hover:text-amber-950 duration-300 m-3  ">
           <h3>Cosplay y arte</h3>
         </li>
       </Link>
-      <Link href="./comunidad" className="  flex flex-col justify-center">
+      <Link href="/opiniones" className="  flex flex-col justify-center">
         <li className=" text-xl font-bold hover:text-amber-950 duration-300 m-3 ">
-          <h3>Comunidad</h3>
+          <h3>Reseñas</h3>
         </li>
       </Link>
-      <Link href="./vtubers" className=" flex flex-col justify-center">
+      <Link href="/vtubers" className=" flex flex-col justify-center">
         <li className=" text-xl font-bold hover:text-amber-950 duration-300 m-3 ">
           <h3>Vtubers</h3>
         </li>
       </Link>
-      <Link href="./categorias" className=" flex flex-col justify-center">
+      <Link href="/categorias" className=" flex flex-col justify-center">
         <li className=" text-xl font-bold hover:text-amber-950 duration-300 m-3">
           <h3>Categorias</h3>
         </li>
