@@ -1,8 +1,9 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import Head from 'next/head';
 import MobileHeader from "./components/MobileHeader";
 import DesktopHeader from "./components/DesktopHeader";
 import Footer from "./components/Footer";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2ZQ8HBRXE"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-E2ZQ8HBRXE');
+        </script>
+        <title>Anime en español</title>
+      </Head>
       <body className={`w-full bg-white${inter.className}`}>
         <MobileHeader />
         <DesktopHeader />
