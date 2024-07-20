@@ -22,7 +22,9 @@ export default async function Page({ params }) {
         />
         <p className="mx-6">{noticia.noticia}</p>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: noticia.Html }} />
+      {/*noticia.Html !== "" && (
+        <section className=' flex p-6 overflow-hidden flex-col items-center' dangerouslySetInnerHTML={{ __html: noticia.Html }} />
+      )*/}
       <p className="text-right m-2">{noticia.fecha}</p>
       {/*<Link href="#">
         <p className="text-right hover:text-amber-500 mr-2 mb-2">
