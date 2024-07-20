@@ -8,7 +8,7 @@ const OpinionesPages = async () => {
       <Link href='/tops'><h2 className="text-2xl font-bold text-center m-1 hover:text-amber-500">Tops</h2></Link>
       <ul className="flex flex-wrap justify-center">
         {news.map((element) => (
-          <Link key={element.id} href={`opiniones/${element.id}`}>
+          <Link key={element.id} href={`tops/${element.id}`}>
             <li
               className=" flex  min-w-56 max-w-56 min-h-80 max-h-80 m-2 border-2 border-amber-400 relative"
               key={element.id}

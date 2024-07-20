@@ -21,6 +21,9 @@ export default async function Page({ params }) {
       <div>
         <p className="mx-6">{cosplay.cosplay}</p>
       </div>
+      {cosplay.Html !== "" && (
+        <section className=' flex p-6 overflow-hidden flex-col items-center' dangerouslySetInnerHTML={{ __html: cosplay.Html }} />
+      )}
       <p className="text-right m-2">{cosplay.fecha}</p>
       {/*<Link href="#">
         <p className="text-right hover:text-amber-500 mr-2 mb-2">
