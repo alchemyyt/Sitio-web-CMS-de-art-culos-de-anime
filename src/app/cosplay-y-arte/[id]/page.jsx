@@ -4,6 +4,9 @@ import { getSpecificData } from "../../services/getData";
 export default async function Page({ params }) {
   const { id } = params;
   const cosplay = await getSpecificData("cosplay-y-arte", id);
+  const contenidoHTML = {
+    __html: cosplay.Html
+  };
   return (
     <main className="flex flex-col aling-center text-center min-h-screen lg:w-3/4 lg:mx-auto bg-white lg:px-6 overflow-hidden">
       <h1 className="font-bold text-xl m-2">{cosplay.titulo}</h1>
@@ -22,7 +25,7 @@ export default async function Page({ params }) {
         <p className="mx-6">{cosplay.cosplay}</p>
       </div>
       {cosplay.Html !== "" && (
-        <section className=' flex p-6 overflow-hidden flex-col items-center' dangerouslySetInnerHTML={{ __html: cosplay.Html }} />
+        <section className=' flex p-6 overflow-hidden flex-col items-center' dangerouslySetInnerHTML={contenidoHTML} />
       )}
       <p className="text-right m-2">{cosplay.fecha}</p>
       {/*<Link href="#">
