@@ -8,7 +8,7 @@ export default async function Page({ params }) {
   return (
     <main className="flex flex-col aling-center text-center min-h-screen lg:w-3/4 lg:mx-auto bg-white lg:px-6 overflow-hidden">
       <h1 className="font-bold text-xl m-2">{cosplay.titulo}</h1>
-      <p className="mx-2">{cosplay.Descripcion}</p>
+      <p className="mx-2">{cosplay.descripcion}</p>
       {cosplay.imagenes.map((imagen) => (
         <img
           key={cosplay.id}
@@ -20,7 +20,7 @@ export default async function Page({ params }) {
       ))}
       {/*console.log(cosplay.imagenes.map((imagen) => imagen.url)) */}
       <div>
-        <p className="mx-6">{cosplay.cosplay}</p>
+        <p className="mx-6">{cosplay.noticia}</p>
       </div>
       {cosplay.Html !== "" && (
         <section className=' flex p-6 overflow-hidden flex-col items-center' dangerouslySetInnerHTML={{ __html: htmlObject }} />
