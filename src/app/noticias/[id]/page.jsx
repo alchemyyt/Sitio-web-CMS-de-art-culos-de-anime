@@ -5,6 +5,7 @@ import YoutubeVideo from "@/app/components/YoutubeVideo";
 export default async function Page({ params }) {
   const { id } = params;
   const noticia = await getSpecificData("noticias", id);
+  const html = noticia.Html
   return (
     <main className="flex flex-col aling-center text-center min-h-screen lg:w-3/4 lg:mx-auto bg-white lg:px-6 overflow-hidden">
       <h1 className="font-bold text-xl m-2">{noticia.titulo}</h1>
@@ -25,6 +26,7 @@ export default async function Page({ params }) {
       {/*noticia.Html !== "" && (
         <section className=' flex p-6 overflow-hidden flex-col items-center' dangerouslySetInnerHTML={{ __html: noticia.Html }} />
       )*/}
+      <div className=' flex p-6 overflow-hidden flex-col items-center' dangerouslySetInnerHTML={{ __html: html }} />
       <p className="text-right m-2">{noticia.fecha}</p>
       {/*<Link href="#">
         <p className="text-right hover:text-amber-500 mr-2 mb-2">
