@@ -1,7 +1,7 @@
 const url = process.env.API_URL;
 
 export async function getData(endpoint) {
-  const res = await fetch(`${url}/${endpoint}`);
+  const res = await fetch(`${url}/${endpoint}?limit=1000`);
   const dataJson = await res.json();
   const dataArray = dataJson.docs;
   return dataArray;
