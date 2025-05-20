@@ -10,20 +10,26 @@ const Opiniones = async () => {
   return (
     <div>
       <Link href={"/opiniones"}>
-        <h2 className="hover:text-amber-500 text-xl ">Opiniones</h2>
+        <h2 className="text-xl font-bold text-amber-900 hover:text-amber-500  ">
+          Opiniones
+        </h2>
       </Link>
       <ul className="flex overflow-x-scroll">
         {lastTops.map((element) => (
-          <Link key={element.id} href={`tops/${element.id}`}>
+          <Link
+            key={element.id}
+            href={`tops/${element.id}`}
+            title={element.titulo}
+          >
             <li
               className=" flex min-w-56 max-w-56 min-h-80 max-h-80 overflow-hidden m-2 border-2 border-amber-400 relative"
               key={element.id}
             >
               <img
                 src={element.portada || element.imagen}
-                alt="web"
+                alt={element.titulo}
+                title={element.titulo}
                 className="w-full transition-all duration-300 hover:brightness-50"
-                cl
               />
               <p className="max-h-36 max-w-full absolute bottom-0 overflow-hidden text-xl font-bold text-center text-amber-500 m-1  hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105">
                 {element.titulo}
@@ -32,16 +38,20 @@ const Opiniones = async () => {
           </Link>
         ))}
         {lastReseñas.map((element) => (
-          <Link key={element.id} href={`resenas/${element.id}`}>
+          <Link
+            key={element.id}
+            href={`resenas/${element.id}`}
+            title={element.titulo}
+          >
             <li
               className=" flex min-w-56 max-w-56 min-h-80 max-h-80 overflow-hidden m-2 border-2 border-amber-400 relative"
               key={element.id}
             >
               <img
                 src={element.portada || element.imagen}
-                alt="web"
+                alt={element.titulo}
+                title={element.titulo}
                 className="w-full transition-all duration-300 hover:brightness-50"
-                cl
               />
               <p className="max-h-36 max-w-full absolute bottom-0 overflow-hidden text-xl font-bold text-center text-amber-500 m-1  hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105">
                 {element.titulo}

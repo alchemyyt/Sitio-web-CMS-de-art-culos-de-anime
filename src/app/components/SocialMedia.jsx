@@ -10,6 +10,7 @@ const SocialMedia = () => {
           href={"https://www.facebook.com/animecastellano"}
           rel="noopener noreferrer"
           target="_blank"
+          title="facebook"
         >
           <FaFacebookSquare className="size-8" />
         </Link>
@@ -19,6 +20,7 @@ const SocialMedia = () => {
           href={"https://www.instagram.com/anime_en_castellano_fans/?hl=es"}
           rel="noopener noreferrer"
           target="_blank"
+          title="instagram"
         >
           <FaInstagram className="size-8" />
         </Link>
@@ -28,6 +30,7 @@ const SocialMedia = () => {
           href={"https://www.facebook.com/animecastellano"}
           rel="noopener noreferrer"
           target="_blank"
+          title="youtube"
         >
           <FaYoutube className="size-8" />
         </Link>

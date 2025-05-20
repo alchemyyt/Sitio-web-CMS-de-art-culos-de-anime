@@ -6,21 +6,27 @@ const BreakingAnimeNews = ({ data }) => {
   const lastPosts = lastElements(10, data);
   return (
     <div>
-      <Link href={"./noticias"}>
-        <h2 className="hover:text-amber-500 text-xl ">Ultimas Noticias</h2>
+      <Link href={"./noticias"} title="ver todas las noticias">
+        <h2 className="text-xl font-bold text-amber-900 hover:text-amber-500  ">
+          Ultimas Noticias
+        </h2>
       </Link>
       <ul className="flex overflow-x-scroll ">
         {lastPosts.map((element) => (
-          <Link key={element.id} href={`./noticias/${element.id}`}>
+          <Link
+            key={element.id}
+            href={`./noticias/${element.id}`}
+            title={element.titulo}
+          >
             <li
               className=" flex  min-w-56 max-w-56 min-h-80 max-h-80 m-2 border-2 border-amber-400 relative"
               key={element.id}
             >
               <img
                 src={element.imagenNoticiaUrl}
-                alt="web"
+                alt={element.titulo}
                 className="w-full transition-all duration-300 hover:brightness-50"
-                cl
+                title={element.titulo}
               />
               <p className="max-h-36 max-w-full absolute bottom-0 overflow-hidden text-xl font-bold text-center text-amber-500 m-1  hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105">
                 {element.titulo}

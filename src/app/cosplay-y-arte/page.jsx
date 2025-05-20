@@ -8,16 +8,20 @@ const Page = async () => {
       <h1 className="text-3xl font-bold text-center m-1">Cosplay y Arte</h1>
       <ul className="flex flex-wrap justify-center">
         {news.map((element) => (
-          <Link key={element.id} href={`./cosplay-y-arte/${element.id}`}>
+          <Link
+            key={element.id}
+            href={`./cosplay-y-arte/${element.id}`}
+            title={element.titulo}
+          >
             <li
               className=" flex  min-w-56 max-w-56 min-h-80 max-h-80 m-2 border-2 border-amber-400 relative"
               key={element.id}
             >
               <img
                 src={element.imagenes[0].url}
-                alt="web"
+                alt={element.titulo}
+                title={element.titulo}
                 className="w-full transition-all duration-300 hover:brightness-50"
-                cl
               />
               <p className="max-h-1/3 max-w-full absolute bottom-0 overflow-hidden text-xl font-bold text-center text-amber-500 m-1  hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105">
                 {element.titulo}

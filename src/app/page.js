@@ -10,6 +10,9 @@ export default async function Home() {
   return (
     <main className="flex flex-col justify-between aling-center text-center min-h-screen min-w-full bg-white lg:grid lg:grid-cols-3  ">
       <div className="col-span-2 ">
+        <h1 className=" text-xl font-bold text-amber-900">
+          Anime en Español: [Comunidad] Noticias y Reseñas de Anime
+        </h1>
         <BreakingAnimeNews data={noticias} />
         <Cosplay data={cosplay} />
         <Opiniones />

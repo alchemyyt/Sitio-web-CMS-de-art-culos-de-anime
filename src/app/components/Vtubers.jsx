@@ -16,9 +16,9 @@ const Vtubers = async () => {
             >
               <img
                 src={element.imagenNoticiaUrl}
-                alt="web"
+                alt={element.titulo}
+                title={element.titulo}
                 className="w-full transition-all duration-300 hover:brightness-50"
-                cl
               />
               <p className="max-h-36 max-w-full absolute bottom-0 overflow-hidden text-xl font-bold text-center text-amber-500 m-1  hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105 py-6">
                 {element.titulo}
