@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import MobileHeader from "./components/MobileHeader";
 import DesktopHeader from "./components/DesktopHeader";
 import Footer from "./components/Footer";
+import CookieConsentBanner from "./components/cookiesbanner";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <MobileHeader />
         <DesktopHeader />
         {children}
+        <CookieConsentBanner />
         <Footer />
         <Analytics />
       </body>

@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "next/link";
 import { getSpecificData } from "../../services/getData";
-import YoutubeVideo from "@/app/components/YoutubeVideo";
 export default async function Page({ params }) {
   const { id } = params;
   const reseñas = await getSpecificData("resenas", id);
